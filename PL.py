@@ -48,7 +48,7 @@ while True:
     if t ==  "time(now)":
         print(datetime.datetime.now())
     if t == "time":
-        f = print(input("Time: "))[:9]
+        f = print(input("Time: "))
     if t == "input":
         input(input("Input: "))
     if t == "hw":
