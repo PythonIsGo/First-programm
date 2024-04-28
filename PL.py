@@ -156,12 +156,19 @@ while True:
     if t == "server.create(local)":
         servidl = input("ID: ")
         serverl = servidl
-        print(serverl)
+        serverinfl = input("Info: ")
+        print(serverl, serverinfl)
     if t == "print(server(local))":
         print(serverl)
     if t == "println(server(local))":
         print(f"\n{serverl}")
     if t == "/n":
         print("\n")
-    if t == 'help':
-        print(help)
+    if t == "server.create(global)":
+        global serverg
+        serverg = input("ID: ")
+        global serveridg
+        serveridg = input("Info: ")
+        print(serverg, serveridg)
+    if t == "license":
+        webbrowser.open_new_tab("LICENSE")
