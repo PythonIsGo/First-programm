@@ -1,0 +1,9 @@
+pip install colorama
+pip install os
+pip install random
+pip install datetime
+pip install art
+pip install webbrowser
+pip install time
+pip install getpass
+pip install shutil
