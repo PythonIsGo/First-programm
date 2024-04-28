@@ -161,3 +161,7 @@ while True:
         print(serverl)
     if t == "println(server(local))":
         print(f"\n{serverl}")
+    if t == "/n":
+        print("\n")
+    if t == 'help':
+        print(help)
