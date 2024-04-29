@@ -10,6 +10,7 @@ import sys
 serverl = 0
 import shutil
 import g4f
+from re import search
 local = []
 print(Fore.LIGHTYELLOW_EX + Back.BLACK+ Style.BRIGHT+"")
 art.tprint("Hello!")
@@ -240,8 +241,6 @@ while True:
         print(text)
     if t == "ai.create(new)":
         token = input("Token(max 9): ")[:9]
-        if token in "w""q""e":
-            print("Token is different!")
         model = input("Model: ")
         local = [token]
         if model == "gpt4":
