@@ -64,8 +64,8 @@ while True:
         if dellet == let:
             del let3
             print("Delete!")
-        if dellet != let:
-            print("Sorry! Not let "+dellet+" !")
+        else:
+            print("InputError: not let")
     if t == "println()":
         sayd = input("Println: ")
         print("\n", sayd)
@@ -110,6 +110,8 @@ while True:
         if impor == "gp":
             impor = ["gp"]
             print("Import settings save")
+        else:
+            print("InputError: not biblio!")
     if t == "print(imports)":
         print(impor)
     if t == "println(imports)":
@@ -172,3 +174,53 @@ while True:
         print(serverg, serveridg)
     if t == "license":
         webbrowser.open_new_tab("LICENSE")
+    if t == "list":
+        whatlist = input("Word in list(max 6): ")
+        if whatlist == "1":
+            leste = input("List: ")
+            list = [leste]
+        if whatlist == "2":
+            leste1 = input("List: ")
+            leste2 = input("List(2): ")
+            list = [leste1, leste2]
+        if whatlist == "3":
+            leste13 = input("List: ")
+            leste23 = input("List(2): ")
+            leste33 = input("List(3): ")
+            list = [leste13, leste23, leste33]
+        if whatlist == "4":
+            leste14 = input("List: ")
+            leste24 = input("List(2): ")
+            leste34 = input("List(3): ")
+            leste44 = input("List(4): ")
+            list = [leste14, leste24, leste34, leste44]
+        if whatlist == "5":
+            leste15 = input("List: ")
+            leste25 = input("List(2): ")
+            leste35 = input("List(3): ")
+            leste45 = input("List(4): ")
+            leste55 = input("List(5): ")
+            list = [leste15, leste25, leste35]
+        if whatlist == "6":
+            l16 = input("List: ")
+            l26 = input("List(2): ")
+            l36 = input("List(3): ")
+            l46 = input("List(4): ")
+            l56 = input("List(5): ")
+            l66 = input("List(6): ")
+            list = [l16, l26, l36, l46, l56, l66]
+        else:
+            print("InputError: write number(1, 2, 3, 4, 5, 6)")
+    if t == "console.error":
+        error = input("Error: ")
+        print(Fore.RED+"❌Error "+error+Fore.RESET)
+    if t == "console.info":
+        info = input("Info: ")
+        print(Fore.LIGHTWHITE_EX+"❕Info "+info+Fore.RESET)
+    if t == "console.warn":
+        warn = input("Warn: ")
+        print(Fore.YELLOW+"⚠️Warn "+warn+Fore.RESET)
+    if t == "print(list)":
+        print(list)
+    if t == "println(list)":
+        print(f"\n{list}")
