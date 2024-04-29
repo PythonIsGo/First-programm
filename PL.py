@@ -241,6 +241,7 @@ while True:
     if t == "ai.create(new)":
         token = input("Token: ")
         model = input("Model: ")
+        local = [token]
         if model == "gpt4":
             print("Чем могу помочь?")
             def ask_say(promt:str)->str:
@@ -253,7 +254,7 @@ while True:
             i = input("")
             pechataet = "ChatGPT печатает..."
             print(pechataet)
-            print(ask_say)
+            print(ask_say(i))
         if model == "gpt35_ultra_turbo":
             print("Чем могу помочь?")
             def ask_say(promt:str)->str:
@@ -266,12 +267,12 @@ while True:
             i = input("")
             pechataet = "ChatGPT печатает..."
             print(pechataet)
-            print(ask_say)
+            print(ask_say(i))
         if model == "gpt4_turbo":
             print("Чем могу помочь?")
             def ask_say(promt:str)->str:
                 response = g4f.ChatCompletion.create(
-                model=g4f.models.gpt_4,
+                model=g4f.models.gpt_4_turbo,
                 messages=[{"role": "user", "content": promt}],
     )
                 return response
@@ -279,7 +280,7 @@ while True:
             i = input("")
             pechataet = "ChatGPT печатает..."
             print(pechataet)
-            print(ask_say)
+            print(ask_say(i))
         if model == "gpt4_32k":
             print("Чем могу помочь?")
             def ask_say(promt:str)->str:
@@ -292,7 +293,7 @@ while True:
             i = input("")
             pechataet = "ChatGPT печатает..."
             print(pechataet)
-            print(ask_say)
+            print(ask_say(i))
         if model == "gpt35_long":
             print("Чем могу помочь?")
             def ask_say(promt:str)->str:
@@ -305,7 +306,7 @@ while True:
             i = input("")
             pechataet = "ChatGPT печатает..."
             print(pechataet)
-            print(ask_say)
+            print(ask_say(i))
         if model == "gpt35_turbo":
             print("Чем могу помочь?")
             def ask_say(promt:str)->str:
@@ -318,4 +319,30 @@ while True:
             i = input("")
             pechataet = "ChatGPT печатает..."
             print(pechataet)
-            print(ask_say)
+            print(ask_say(i))
+        if model == "gpt4_32k_13":
+            print("Чем могу помочь?")
+            def ask_say(promt:str)->str:
+                response = g4f.ChatCompletion.create(
+                model=g4f.models.gpt_4_32k_0613,
+                messages=[{"role": "user", "content": promt}],
+    )
+                return response
+
+            i = input("")
+            pechataet = "ChatGPT печатает..."
+            print(pechataet)
+            print(ask_say(i))
+        if model == "gpt35_turbo_16k":
+            print("Чем могу помочь?")
+            def ask_say(promt:str)->str:
+                response = g4f.ChatCompletion.create(
+                model=g4f.models.gpt_35_turbo_16k,
+                messages=[{"role": "user", "content": promt}],
+    )
+                return response
+
+            i = input("")
+            pechataet = "ChatGPT печатает..."
+            print(pechataet)
+            print(ask_say(i))
