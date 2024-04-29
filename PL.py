@@ -9,6 +9,7 @@ import getpass
 import sys
 serverl = 0
 import shutil
+import g4f
 local = []
 print(Fore.LIGHTYELLOW_EX + Back.BLACK+ Style.BRIGHT+"")
 art.tprint("Hello!")
@@ -237,3 +238,84 @@ while True:
     if t == "text":
         text = input("Txt: ")
         print(text)
+    if t == "ai.create(new)":
+        token = input("Token: ")
+        model = input("Model: ")
+        if model == "gpt4":
+            print("Чем могу помочь?")
+            def ask_say(promt:str)->str:
+                response = g4f.ChatCompletion.create(
+                model=g4f.models.gpt_4,
+                messages=[{"role": "user", "content": promt}],
+    )
+                return response
+
+            i = input("")
+            pechataet = "ChatGPT печатает..."
+            print(pechataet)
+            print(ask_say)
+        if model == "gpt35_ultra_turbo":
+            print("Чем могу помочь?")
+            def ask_say(promt:str)->str:
+                response = g4f.ChatCompletion.create(
+                model=g4f.models.gpt_35_turbo_16k_0613,
+                messages=[{"role": "user", "content": promt}],
+    )
+                return response
+
+            i = input("")
+            pechataet = "ChatGPT печатает..."
+            print(pechataet)
+            print(ask_say)
+        if model == "gpt4_turbo":
+            print("Чем могу помочь?")
+            def ask_say(promt:str)->str:
+                response = g4f.ChatCompletion.create(
+                model=g4f.models.gpt_4,
+                messages=[{"role": "user", "content": promt}],
+    )
+                return response
+
+            i = input("")
+            pechataet = "ChatGPT печатает..."
+            print(pechataet)
+            print(ask_say)
+        if model == "gpt4_32k":
+            print("Чем могу помочь?")
+            def ask_say(promt:str)->str:
+                response = g4f.ChatCompletion.create(
+                model=g4f.models.gpt_4_32k,
+                messages=[{"role": "user", "content": promt}],
+    )
+                return response
+
+            i = input("")
+            pechataet = "ChatGPT печатает..."
+            print(pechataet)
+            print(ask_say)
+        if model == "gpt35_long":
+            print("Чем могу помочь?")
+            def ask_say(promt:str)->str:
+                response = g4f.ChatCompletion.create(
+                model=g4f.models.gpt_35_long,
+                messages=[{"role": "user", "content": promt}],
+    )
+                return response
+
+            i = input("")
+            pechataet = "ChatGPT печатает..."
+            print(pechataet)
+            print(ask_say)
+        if model == "gpt35_turbo":
+            print("Чем могу помочь?")
+            def ask_say(promt:str)->str:
+                response = g4f.ChatCompletion.create(
+                model=g4f.models.gpt_35_turbo_0613,
+                messages=[{"role": "user", "content": promt}],
+    )
+                return response
+
+            i = input("")
+            pechataet = "ChatGPT печатает..."
+            print(pechataet)
+            print(ask_say)
