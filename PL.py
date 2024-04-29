@@ -7,6 +7,7 @@ import webbrowser
 from time import sleep
 import getpass
 import sys
+import requests
 serverl = 0
 import shutil
 import g4f
@@ -352,3 +353,8 @@ while True:
         del g4f
     if t == "ai.stop()":
         del g4f
+    if t == "file.open(new)": 
+        name = input("Name file: ")
+        write = input("Write in file: ")
+        with open(name, 'w') as file:
+            file.write(write)
