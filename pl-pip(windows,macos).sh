@@ -9,4 +9,3 @@ pip3 install getpass
 pip3 install shutil
 pip3 install g4f
 pip3 install search
-pip3 install kivy
