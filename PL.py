@@ -239,7 +239,9 @@ while True:
         text = input("Txt: ")
         print(text)
     if t == "ai.create(new)":
-        token = input("Token: ")
+        token = input("Token(max 9): ")[:9]
+        if token in "w""q""e":
+            print("Token is different!")
         model = input("Model: ")
         local = [token]
         if model == "gpt4":
@@ -346,3 +348,6 @@ while True:
             pechataet = "ChatGPT печатает..."
             print(pechataet)
             print(ask_say(i))
+        print(token)
+    if t == "ai.del()":
+        del g4f
