@@ -224,3 +224,13 @@ while True:
         print(list)
     if t == "println(list)":
         print(f"\n{list}")
+    if t == "pip(linux)":
+        webbrowser.open_new_tab("pl-pip(linux).sh")
+    if t == "pip(windows)":
+        webbrowser.open_new_tab("pl-pip(windows,macos).sh")
+    if t == "pip(macos)":
+        webbrowser.open_new_tab("pl-pip(windows,macos).sh")
+    if t == "AVATAR":
+        webbrowser.open_new_tab("avatar.png")
+    if t == "BITS":
+        webbrowser.open_new_tab("BITS.jpg")
