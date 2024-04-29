@@ -154,7 +154,7 @@ while True:
     if t == "infinite_fone":
         os.system("cls||clear")
         while True:
-            print("Dowdonalding...")
+            print("Downloading...")
     if t == "server.create(local)":
         servidl = input("ID: ")
         serverl = servidl
@@ -211,13 +211,13 @@ while True:
             list = [l16, l26, l36, l46, l56, l66]
         else:
             print("InputError: write number(1, 2, 3, 4, 5, 6)")
-    if t == "console.error":
+    if t == "console.error()":
         error = input("Error: ")
         print(Fore.RED+"❌Error "+error+Fore.RESET)
-    if t == "console.info":
+    if t == "console.info()":
         info = input("Info: ")
         print(Fore.LIGHTWHITE_EX+"❕Info "+info+Fore.RESET)
-    if t == "console.warn":
+    if t == "console.warn()":
         warn = input("Warn: ")
         print(Fore.YELLOW+"⚠️Warn "+warn+Fore.RESET)
     if t == "print(list)":

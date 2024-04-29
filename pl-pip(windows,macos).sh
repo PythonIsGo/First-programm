@@ -7,3 +7,4 @@ pip3 install webbrowser
 pip3 install time
 pip3 install getpass
 pip3 install shutil
+pip3 install g4f
