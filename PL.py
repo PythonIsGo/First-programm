@@ -234,3 +234,6 @@ while True:
         webbrowser.open_new_tab("avatar.png")
     if t == "BITS":
         webbrowser.open_new_tab("BITS.jpg")
+    if t == "text":
+        text = input("Txt: ")
+        print(text)
