@@ -350,3 +350,5 @@ while True:
         print(token)
     if t == "ai.del()":
         del g4f
+    if t == "ai.stop()":
+        del g4f
