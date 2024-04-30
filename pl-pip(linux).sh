@@ -11,3 +11,4 @@ pip install g4f
 pip install search
 pip install requests
 pip install Pillow
+pip install pywebio

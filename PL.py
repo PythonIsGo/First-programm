@@ -392,4 +392,3 @@ while True:
         list += liisplus
     if t == "list -":
         listminus = input("-: ")
-        list -= listminus
