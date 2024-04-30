@@ -101,7 +101,7 @@ while True:
     if t == "df(file)":
         deletefiles = input("Delete(file): ")
         os.remove(deletefiles)
-    if t == "site":
+    if t == "site(my)":
         webbrowser.open_new_tab("http://electrobrainmygit.tilda.ws/")
     if t == "print(let)":
         print(let3)
@@ -387,5 +387,3 @@ while True:
         print(Back.WHITE+"Saved!")
     if t == "bg reset":
         print(Back.RESET+"Saved!")
-    else:
-        print("CommandError: not your command")
