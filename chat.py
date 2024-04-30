@@ -13,7 +13,7 @@ MAX_MESSAGES_COUNT = 500000000000000000000000
 async def main():
     global chat_msgs
     
-    put_markdown("## 🧊 Добро пожаловать на форум Python!")
+    put_markdown("## 🧊 Добро пожаловать в чат!")
 
     msg_box = output()
     put_scrollable(msg_box, height=300, keep_bottom=True)
@@ -29,7 +29,7 @@ async def main():
     while True:
         data = await input_group("💭 Новое сообщение", [
             input(placeholder="Текст сообщения ...", name="msg"),
-            actions(name="cmd", buttons=["Отправить", {'label': "Выйти из форума", 'type': 'cancel'}])
+            actions(name="cmd", buttons=["Отправить", {'label': "Выйти из чата", 'type': 'cancel'}])
         ], validate = lambda m: ('msg', "Введите текст сообщения!") if m["cmd"] == "Отправить" and not m['msg'] else None)
 
         if data is None:
