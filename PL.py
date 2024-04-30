@@ -392,5 +392,3 @@ while True:
         list += liisplus
     if t == "list -":
         listminus = input("-: ")
-    if t == "chat":
-        import chat
