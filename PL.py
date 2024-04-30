@@ -101,8 +101,6 @@ while True:
     if t == "df(file)":
         deletefiles = input("Delete(file): ")
         os.remove(deletefiles)
-    if t == "help(site)":
-        webbrowser.open_new_tab("help.html")
     if t == "site":
         webbrowser.open_new_tab("http://project9387299.tilda.ws/")
     if t == "print(let)":
@@ -145,9 +143,6 @@ while True:
         open(f"{nf}.txt",'a').close()
     if t == "cd":
         cd = input("Cd: ")
-        os.system(f"cd {cd}")
-    if t == "help(avt)":
-        webbrowser.open_new_tab("pay.html")
     if t == "let size":
         print(sys.getsizeof(let3))
         print("byte")
