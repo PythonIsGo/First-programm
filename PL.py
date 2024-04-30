@@ -231,8 +231,6 @@ while True:
         webbrowser.open_new_tab("pl-pip(windows,macos).sh")
     if t == "AVATAR":
         webbrowser.open_new_tab("avatar.png")
-    if t == "BITS":
-        webbrowser.open_new_tab("BITS.jpg")
     if t == "text":
         text = input("Txt: ")
         print(text)
@@ -371,5 +369,23 @@ while True:
         imgop = input("Name file(or path to file): ")
         im = Image.open(imgop)
         im.show()
+    if t == "bg green":
+        print(Back.GREEN+"Saved!")
+    if t == "bg red":
+        print(Back.RED+"Saved!")
+    if t == "bg blue":
+        print(Back.BLUE+"Saved!")
+    if t == "bg pink":
+        print(Back.MAGENTA+"Saved!")
+    if t == "bg cyan":
+        print(Back.CYAN+"Saved!")
+    if t == "bg yellow":
+        print(Back.YELLOW+"Saved!")
+    if t == "bg black":
+        print(Back.BLACK+"Saved!")
+    if t == "bg white":
+        print(Back.WHITE+"Saved!")
+    if t == "bg reset":
+        print(Back.RESET+"Saved!")
     else:
         print("CommandError: not your command")
