@@ -376,3 +376,5 @@ while True:
         imgop = input("Name file(or path to file): ")
         im = Image.open(imgop)
         im.show()
+    else:
+        print("CommandError: not your command")
