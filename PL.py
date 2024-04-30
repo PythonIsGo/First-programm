@@ -12,6 +12,7 @@ serverl = 0
 import shutil
 import g4f
 from re import search
+from PIL import Image
 local = []
 print(Fore.LIGHTYELLOW_EX + Back.BLACK+ Style.BRIGHT+"")
 art.tprint("Hello!")
@@ -371,3 +372,7 @@ while True:
     if t == "let-":
         minuslet = input("-(string): ")
         let3 -= minuslet
+    if t == "img.open()":
+        imgop = input("Name file(or path to file): ")
+        im = Image.open(imgop)
+        im.show()
