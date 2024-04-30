@@ -102,7 +102,7 @@ while True:
         deletefiles = input("Delete(file): ")
         os.remove(deletefiles)
     if t == "site":
-        webbrowser.open_new_tab("http://project9387299.tilda.ws/")
+        webbrowser.open_new_tab("http://electrobrainmygit.tilda.ws/")
     if t == "print(let)":
         print(let3)
     if t == "println(let)":
