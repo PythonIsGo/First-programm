@@ -10,3 +10,4 @@ pip3 install shutil
 pip3 install g4f
 pip3 install search
 pip3 install requests
+pip3 install Pillow
