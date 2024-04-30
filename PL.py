@@ -358,3 +358,16 @@ while True:
         write = input("Write in file: ")
         with open(name, 'w') as file:
             file.write(write)
+    if t == "off/on":
+        os.system("reboot")
+    if t == "off(+)":
+        plus = input("+: ")
+        os.system(f"shutdown +{plus}")
+    if t == "off()":
+        os.system("shutdown +0")
+    if t == "let+":
+        pluslet = input("+(string): ")
+        let3 += pluslet
+    if t == "let-":
+        minuslet = input("-(string): ")
+        let3 -= minuslet
