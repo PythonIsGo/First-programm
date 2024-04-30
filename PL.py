@@ -387,3 +387,9 @@ while True:
         print(Back.WHITE+"Saved!")
     if t == "bg reset":
         print(Back.RESET+"Saved!")
+    if t == "list +":
+        liisplus = input("+: ")
+        list += liisplus
+    if t == "list -":
+        listminus = input("-: ")
+        list -= listminus
