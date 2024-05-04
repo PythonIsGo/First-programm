@@ -34,40 +34,41 @@ sleep(2)
 inp = art.tprint("ElectroBrain")
 print(Fore.RESET+"")
 os.system("cls||clear")
-while True:
+run = True
+while run:
     t = input("ElectroBrain(Programming Language): ")
     if t == "clear":
         os.system("cls||clear")
-    if t == "print":
+    if t == "print()":
         say = input("Print: ")
         print(say)
-    if t == "color red":
+    if t == "color red()":
         print(Fore.RED+"Saved!")
-    if t == "color green":
+    if t == "color green()":
         print(Fore.GREEN+"Saved!")
-    if t == "color yellow":
+    if t == "color yellow()":
         print(Fore.YELLOW+"Saved!")
-    if t == "color blue":
+    if t == "color blue()":
         print(Fore.BLUE+"Saved!")
-    if t == "color pink":
+    if t == "color pink()":
         print(Fore.MAGENTA+"Saved!")
-    if t == "color black":
+    if t == "color black()":
         print(Fore.BLACK+"Saved!")
-    if t == "color white":
+    if t == "color white()":
         print(Fore.WHITE+"Saved!")
-    if t == "color reset":
+    if t == "color reset()":
         print(Fore.RESET+"Saved!")
-    if t == "color cyan":
+    if t == "color cyan()":
         print(Fore.CYAN+"Saved!")
     if t ==  "time(now)":
         print(datetime.datetime.now())
-    if t == "time":
+    if t == "time()":
         f = print(input("Time: "))
-    if t == "input":
+    if t == "input()":
         input(input("Input: "))
     if t == "hw":
         print('Hello world!')
-    if t == "let":
+    if t == "let.create()":
         let = input("Let name: ")
         let2 = input("Let info: ")
         let3 = let2
@@ -100,10 +101,10 @@ while True:
         rmdir1 = input("Delete folder: ")
         os.rmdir(rmdir1)
         print("Delete!")
-    if t == "pay":
+    if t == "pay()":
         pay = input("Pay: ")
         print("\n\n\n\n\n\n\n\n\n"+Fore.LIGHTMAGENTA_EX+"You have been credited "+pay+Fore.RESET+"\n\n\n\n\n\n\n\n\n")
-    if t == "pass":
+    if t == "pass()":
         pass
     if t == "df(f)":
         RMTREE = input("Delete(folder and files(in folder)): ")
@@ -138,33 +139,34 @@ while True:
             getpass.getpass(gp)
         else:
             print("ImportError: Not GP!")
-    if t == "web":
+    if t == "web()":
         web = input("Open site: ")
         webbrowser.open(web)
-    if t == "web_new":
+    if t == "web_new()":
         web1 = input("Open site: ")
         webbrowser.open_new(web1)
-    if t == "web_new_tab":
+    if t == "web_new_tab()":
         web2 = input("Open site: ")
         webbrowser.open_new_tab(web2)
     if t == "quit":
         exit("QUIT")
-    if t == "nf":
+    if t == "nf()":
         nw = input("New folder: ")
         os.mkdir(nw)
     if t == "nf(f)":
         nf = input("New file(name): ")
         open(f"{nf}.txt",'a').close()
-    if t == "cd":
+    if t == "cd()":
         cd = input("Cd: ")
-    if t == "let size":
+        os.system(f"cd {cd}")
+    if t == "let size()":
         print(sys.getsizeof(let3))
         print("byte")
-    if t == "math.pi":
+    if t == "math.pi()":
         print("3.141592653589793")
-    if t == "math.calc":
+    if t == "math.calc()":
         print(eval(input("Calc: ")))
-    if t == "infinite_fone":
+    if t == "infinite_fone()":
         os.system("cls||clear")
         while True:
             print("Downloading...")
@@ -189,9 +191,9 @@ while True:
         print(f"ID: {serverg}, info: {serveridg}")
     if t == "println(server(global))":
         print(f"\nID: {serverg}, info: {serveridg}")
-    if t == "license":
+    if t == "license()":
         webbrowser.open_new_tab("LICENSE")
-    if t == "list":
+    if t == "list()":
         whatlist = input("Word in list(max 6): ")
         if whatlist == "1":
             leste = input("List: ")
@@ -242,14 +244,10 @@ while True:
     if t == "println(list)":
         print(f"\n{list}")
     if t == "pip(linux)":
-        webbrowser.open_new_tab("pl-pip(linux).sh")
-    if t == "pip(windows)":
-        webbrowser.open_new_tab("pl-pip(windows,macos).sh")
-    if t == "pip(macos)":
-        webbrowser.open_new_tab("pl-pip(windows,macos).sh")
-    if t == "AVATAR":
+        webbrowser.open_new_tab("piplinux.sh")
+    if t == "AVATAR()":
         webbrowser.open_new_tab("avatar.png")
-    if t == "text":
+    if t == "text()":
         text = input("Txt: ")
         print(text)
     if t == "ai.create(new)":
@@ -370,45 +368,45 @@ while True:
         write = input("Write in file: ")
         with open(name, 'w') as file:
             file.write(write)
-    if t == "off/on":
+    if t == "off/on()":
         os.system("reboot")
     if t == "off(+)":
         plus = input("+: ")
         os.system(f"shutdown +{plus}")
     if t == "off()":
         os.system("shutdown +0")
-    if t == "let+":
+    if t == "let+()":
         pluslet = input("+(string): ")
         let3 += pluslet
-    if t == "let-":
+    if t == "let-()":
         minuslet = input("-(string): ")
         let3 -= minuslet
     if t == "img.open()":
         imgop = input("Name file(or path to file): ")
         im = Image.open(imgop)
         im.show()
-    if t == "bg green":
+    if t == "bg green()":
         print(Back.GREEN+"Saved!")
-    if t == "bg red":
+    if t == "bg red()":
         print(Back.RED+"Saved!")
-    if t == "bg blue":
+    if t == "bg blue()":
         print(Back.BLUE+"Saved!")
-    if t == "bg pink":
+    if t == "bg pink()":
         print(Back.MAGENTA+"Saved!")
-    if t == "bg cyan":
+    if t == "bg cyan()":
         print(Back.CYAN+"Saved!")
-    if t == "bg yellow":
+    if t == "bg yellow()":
         print(Back.YELLOW+"Saved!")
-    if t == "bg black":
+    if t == "bg black()":
         print(Back.BLACK+"Saved!")
-    if t == "bg white":
+    if t == "bg white()":
         print(Back.WHITE+"Saved!")
-    if t == "bg reset":
+    if t == "bg reset()":
         print(Back.RESET+"Saved!")
-    if t == "list +":
+    if t == "list+()":
         liisplus = input("+: ")
         list += liisplus
-    if t == "list -":
+    if t == "list-()":
         listminus = input("-: ")
     if t == "send.message(email)":
         messageemail = input('Message: ')
@@ -451,7 +449,7 @@ while True:
         print("\n")
     if t == "//":
         print("\n\n")
-    if t == "chat.online":
+    if t == "chat.online()":
         if imp in "chat":
             print("Open file chat.py")
         else:
@@ -463,19 +461,19 @@ while True:
         print(messageserver)
     if t == "println(server(message))":
         print(f"\n{messageserver}")
-    if t == "package":
+    if t == "package()":
         pack = input("Package: ")
         if pack == "SyntaxS":
             while True:
                 print("S")
         else:
             print("PackageError: not package")
-    if t == "Ruby":
+    if t == "Ruby.create.code()":
         with open('file.ru','w'):
             print("Save ruby file")
-    if t == "ping":
+    if t == "ping()":
         webbrowser.open_new_tab("https://2ip.ru/speed/")
-    if t == "setpass":
+    if t == "setpass()":
         passsword = getpass.getpass("Your password: ")
         passwordinput = getpass.getpass()
         if passwordinput == f"{passsword}":
@@ -507,16 +505,15 @@ while True:
         text = input("Text: ")
         close = input("CLose func: ")
         ok = input("Ok func: ")
-        adf = input("Add func(yes or no): ")
         os.system("cls||clear")
-        alert = input(f"{text} (Ok or Close)[{ok}] [{close}] ")
+        alert = input(f"{text} [{ok}] or [{close}] ")
         if alert == ok:
             print("Confirmed")
             sleep(1.5)
             os.system('cls||clear')
         if alert == close:
             os.system("cls||clear")
-    if t == "ps":
+    if t == "ps()":
         webbrowser.open_new_tab("https://2ip.ru/port-scaner/")
         dan = input("Port-scanner info: ")
         system += dan
@@ -530,12 +527,41 @@ while True:
         p = psutil.virtual_memory()
         util = p
         print(util)
-    if t == "cpu_time":
+    if t == "cpu_time()":
         print(psutil.cpu_times())
-    if t == "pc.info":
+    if t == "pc.info()":
         print(psutil.cpu_count(), psutil.boot_time, psutil.cpu_freq(), psutil.cpu_percent(), psutil.cpu_times(), psutil.disk_usage, psutil.disk_io_counters(), psutil.cpu_stats(), psutil.cpu_times_percent(), psutil.disk_partitions(), psutil.net_if_addrs(), psutil.pid_exists)
         print("")
     if t == "print(not)":
         print("Error!")
-    if t == "creator":
+    if t == "creator()":
         print("Привет! Меня зовут Кирилл. И я создал этот язык. Он создавался довольно таки долгое время, и я прошу: если можешь, то поддержи меня: 2200 7005 2653 0208. спасибо за то что пользуйтесь языком ;)")
+    if t == "send.confirm()":
+        text1 = input("Text: ")
+        ok1 = input("Ok func: ")
+        close1 = input("Close func: ")
+        notf = input("NotOk func: ")
+        os.system("cls||clear")
+        alert1 = input(f"{text1} [{ok1}] or [{close1}] or [{notf}] ")
+        if alert1 == ok1:
+            print("Confirmed")
+            sleep(1.5)
+            os.system("cls||clear")
+        if alert1 == close1:
+            os.system("cls||clear")
+        if alert1 == notf:
+            print("Not confirmed")
+            sleep(1.5)
+            os.system("cls||clear")
+    if t == "server.delete(local)":
+        del serverinfl
+        del serverl
+    if t == "server.delete(global)":
+        del serveridg
+        del serverg
+    if t == "server.delete(all)":
+        del serveridg
+        del serverg
+        del serverinfl
+        del serverl
+    
