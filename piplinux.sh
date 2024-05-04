@@ -1,0 +1,16 @@
+pip install colorama
+pip install os
+pip install random
+pip install datetime
+pip install art
+pip install webbrowser
+pip install time
+pip install getpass
+pip install shutil
+pip install g4f
+pip install search
+pip install requests
+pip install Pillow
+pip install pywebio
+pip install playsound
+pip install psutil
