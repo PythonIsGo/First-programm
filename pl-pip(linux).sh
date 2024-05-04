@@ -12,3 +12,5 @@ pip install search
 pip install requests
 pip install Pillow
 pip install pywebio
+pip install playsound
+pip install psutil

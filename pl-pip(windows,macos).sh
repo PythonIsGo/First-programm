@@ -12,3 +12,5 @@ pip3 install search
 pip3 install requests
 pip3 install Pillow
 pip3 install pywebio
+pip3 install playsound
+pip3 install psutil

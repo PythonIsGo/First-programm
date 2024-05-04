@@ -6,18 +6,28 @@ import art
 import webbrowser
 from time import sleep
 import getpass
+import psutil
+messageserver = ""
 import sys
-import requests
 serverl = 0
+serverp = ""
+import playsound
 import shutil
 import g4f
+messages = ""
 from re import search
 from PIL import Image
+privacy = ""
+pgs = ""
 local = []
+email = ""
+get = ""
+system = ""
 print(Fore.LIGHTYELLOW_EX + Back.BLACK+ Style.BRIGHT+"")
 art.tprint("Hello!")
+playsound.playsound('zapusk.mp3')
 print(Fore.LIGHTMAGENTA_EX+"")
-imp = ['']
+imp = ''
 sleep(2)
 art.tprint("E  L  E  C  T  R  O  B  R  A  I  N")
 sleep(2)
@@ -73,9 +83,10 @@ while True:
     if t == "println()":
         sayd = input("Println: ")
         print("\n", sayd)
-    if t == "message.send()":
+    if t == "send.message()":
         message = input("Message: ")
-        print(Fore.LIGHTRED_EX+"\n\n\n\n\n\n\n\n\n\n\n\n\n\n•New message!\n\n\n\n\n\n"+Fore.BLUE+message+Fore.RESET+"\n\n\n\n\n\n\n\n\n\n\n")
+        print(Fore.LIGHTRED_EX+"\n\n\n\n\n\n\n\n\n•New message!\n\n\n\n\n\n"+Fore.BLUE+message+Fore.RESET+"\n\n\n\n\n\n\n\n\n")
+        messages += message
     if t == "art.print()":
         art1 = input("Art: ")
         art.tprint(art1)
@@ -110,20 +121,23 @@ while True:
     if t == "import":
         impor = input("Import: ")
         if impor == "gp":
-            impor = ["gp"]
+            imp += "gp"
             print("Import settings save")
+        if impor == "chat":
+            imp += "chat"
+            print("Import setting save")
         else:
-            print("InputError: not biblio!")
+            print("InputError: not biblio")
     if t == "print(imports)":
         print(impor)
     if t == "println(imports)":
         print(f"\n{impor}")
     if t == "gp()":
-        if "gp" in impor:
+        if "gp" in imp:
             gp = input("Input(gp(bg = 0%(getpass(pass))): ")
             getpass.getpass(gp)
         else:
-            print("Not GP!")
+            print("ImportError: Not GP!")
     if t == "web":
         web = input("Open site: ")
         webbrowser.open(web)
@@ -171,6 +185,10 @@ while True:
         global serveridg
         serveridg = input("Info: ")
         print(serverg, serveridg)
+    if t == "print(server(global))":
+        print(f"ID: {serverg}, info: {serveridg}")
+    if t == "println(server(global))":
+        print(f"\nID: {serverg}, info: {serveridg}")
     if t == "license":
         webbrowser.open_new_tab("LICENSE")
     if t == "list":
@@ -392,3 +410,132 @@ while True:
         list += liisplus
     if t == "list -":
         listminus = input("-: ")
+    if t == "send.message(email)":
+        messageemail = input('Message: ')
+        email += messageemail
+    if t == "print(email)":
+        print(email)
+    if t == "println(email)":
+        print(f"\n{email}")
+    if t == "send.get()":
+        g1 = input("Get: ")
+        get += g1
+        print("get...")
+        sleep(randint(1,5))
+        print(f"GET: {get}")
+    if t == "print(get)":
+        print("get...")
+        sleep(randint(1,5))
+        print(f"GET: {get}")
+    if t == "println(get)":
+        print("get...")
+        sleep(randint(1,5))
+        print(f"\nGET: {get}")
+    if t == "send.get(server(local))":
+        inf = input("Get: ")
+        serverinfl += inf
+        get += f"local: {inf}"
+    if t == "send.get(server(global)":
+        getg = input("Get: ")
+        serveridg += getg
+        get += f"global: {getg}"
+    if t == "send.sysget()":
+        sysget = input("System get: ")
+        system += sysget
+        print(f"\n\n\n\n\n\n\n\n SYSTEM GET:  {sysget}\n\n\n\n\n\n\n\n\n\n")
+    if t == "print(messages)":
+        print(messages)
+    if t == "println(messages)":
+        print(f"\n{messages}")
+    if t == "/":
+        print("\n")
+    if t == "//":
+        print("\n\n")
+    if t == "chat.online":
+        if imp in "chat":
+            print("Open file chat.py")
+        else:
+            print("ImportError: Not chat!")
+    if t == "send.message(server)":
+        sendms = input("Message: ")
+        messageserver += sendms
+    if t == "print(server(message))":
+        print(messageserver)
+    if t == "println(server(message))":
+        print(f"\n{messageserver}")
+    if t == "package":
+        pack = input("Package: ")
+        if pack == "SyntaxS":
+            while True:
+                print("S")
+        else:
+            print("PackageError: not package")
+    if t == "Ruby":
+        with open('file.ru','w'):
+            print("Save ruby file")
+    if t == "ping":
+        webbrowser.open_new_tab("https://2ip.ru/speed/")
+    if t == "setpass":
+        passsword = getpass.getpass("Your password: ")
+        passwordinput = getpass.getpass()
+        if passwordinput == f"{passsword}":
+            print("Password save")
+            privacy += passsword
+        if passwordinput != passsword:
+            print("This is different password")
+    if t == "print(privacy)":
+        print(privacy)
+    if t == "println(privacy)":
+        print(f"\n{privacy}")
+    if t == "server.create(privacy)":
+        priv = webbrowser.open_new_tab("https://2ip.io/ru/privacy/")
+        privc = input("Privacy: ")
+        privacy += privc
+    if t == "print(server(privacy))":
+        print(privacy)
+    if t == 'println(server(privacy))':
+        print(f"\n{privacy}")
+    if t == "delete server(privacy)":
+        del privacy
+    if t == "delete server(local)":
+        del serverl
+        del serverinfl
+    if t == "delete server(global)":
+        del serveridg
+        del serverg
+    if t == "send.alert()":
+        text = input("Text: ")
+        close = input("CLose func: ")
+        ok = input("Ok func: ")
+        adf = input("Add func(yes or no): ")
+        os.system("cls||clear")
+        alert = input(f"{text} (Ok or Close)[{ok}] [{close}] ")
+        if alert == ok:
+            print("Confirmed")
+            sleep(1.5)
+            os.system('cls||clear')
+        if alert == close:
+            os.system("cls||clear")
+    if t == "ps":
+        webbrowser.open_new_tab("https://2ip.ru/port-scaner/")
+        dan = input("Port-scanner info: ")
+        system += dan
+    if t == "print(ps)":
+        print(dan)
+    if t == "println(ps)":
+        print(f"\n{dan}")
+    if t == "cpu":
+        print("Number of CPUs:", os.cpu_count())
+    if t == "pc.info()":
+        p = psutil.virtual_memory()
+        util = p
+        print(util)
+    if t == "cpu_time":
+        print(psutil.cpu_times())
+    if t == "pc.info":
+        print(psutil.cpu_count(), psutil.boot_time, psutil.cpu_freq(), psutil.cpu_percent(), psutil.cpu_times(), psutil.disk_usage, psutil.disk_io_counters(), psutil.cpu_stats(), psutil.cpu_times_percent(), psutil.disk_partitions(), psutil.net_if_addrs(), psutil.pid_exists)
+        print("")
+    if t == "print(not)":
+        print("Error!")
+    if t == "creator":
+        print("Привет! Меня зовут Кирилл. И я создал этот язык. Он создавался довольно таки долгое время, и я прошу: если можешь, то поддержи меня: 2200 7005 2653 0208. спасибо за то что пользуйтесь языком ;)")
