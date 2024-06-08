@@ -9,15 +9,17 @@ import getpass
 import psutil
 messageserver = ""
 import sys
-serverl = 0
+serverl = ""
 serverp = ""
 import playsound
 import shutil
 import g4f
+from tkinter import *
 messages = ""
 from re import search
 from PIL import Image
 privacy = ""
+mains = ""
 pgs = ""
 local = []
 email = ""
@@ -124,15 +126,13 @@ while run:
         if impor == "gp":
             imp += "gp"
             print("Import settings save")
-        if impor == "chat":
-            imp += "chat"
-            print("Import setting save")
-        else:
-            print("InputError: not biblio")
+        if impor == "win4Tools":
+            print("Import settings save")
+            imp += "win4Tools"
     if t == "print(imports)":
-        print(impor)
+        print(imp)
     if t == "println(imports)":
-        print(f"\n{impor}")
+        print(f"\n{imp}")
     if t == "gp()":
         if "gp" in imp:
             gp = input("Input(gp(bg = 0%(getpass(pass))): ")
@@ -449,11 +449,6 @@ while run:
         print("\n")
     if t == "//":
         print("\n\n")
-    if t == "chat.online()":
-        if imp in "chat":
-            print("Open file chat.py")
-        else:
-            print("ImportError: Not chat!")
     if t == "send.message(server)":
         sendms = input("Message: ")
         messageserver += sendms
@@ -564,4 +559,99 @@ while run:
         del serverg
         del serverinfl
         del serverl
-    
+    if t == "ai.update()":
+        os.system("pip install -U g4f")
+    if t == "/":
+        print("\n")
+    if t == "////":
+        print("\n\n\n\n")
+    if t == "{main}":
+        mainname = input("Name: ")
+        mains += mainname
+        print(f"""static public main__{mainname}:
+              CREATE
+        """)
+    if t == "win4.create(window)":
+        if "win4Tools" in imp:
+            win4geometry = input("Geometry(geometry1 x geometry2): ")
+            win4title = input("Title: ")
+            win = Tk()
+            win.geometry(f"{win4geometry}")
+            win.title(f"{win4title}")
+            print("compiling...")
+            sleep(randint(1,5))
+            win.mainloop()
+        if "win4Tools" not in imp:
+            print("Win4Tools not installed")
+    if t == "win4.create(window(setbg))":
+            if "win4Tools" in imp:
+                win4geometry = input("Geometry(geometry1 x geometry2): ")
+                win4title = input("Title: ")
+                win4bg = input("BgColor: ")
+                win = Tk()
+                win.geometry(f"{win4geometry}")
+                win.title(f"{win4title}")
+                win['bg'] = f"{win4bg}"
+                print("compiling...")
+                sleep(randint(1,5))
+                win.mainloop()
+            if "win4Tools" not in imp:
+                print("Win4Tools not installed")
+    if t == "win4.create(window, label)"or t == "win4.create(window,label)":
+        if "win4Tools" in imp:
+            win4geometry = input("Geometry(geometry1 x geometry2): ")
+            win4title = input("Title: ")
+            win4label = input("Label: ")
+            win4labelplacex = input("Label place(x): ")
+            win4placelabely = input("Label place(y): ")
+            win = Tk()
+            win.geometry(f"{win4geometry}")
+            win.title(f"{win4title}")
+            winlabel = Label(win, text=f"{win4label}")
+            winlabel.place(x = win4labelplacex, y = win4placelabely)
+            print("compiling...")
+            sleep(randint(1,5))
+            win.mainloop()
+        if "win4Tools" not in imp:
+            print("Win4Tools not installed")
+    if t == "win4.create(window, label, (setbg))"or t == "win4.create(window,label,(setbg))":
+        if "win4Tools" in imp:
+            win4geometry = input("Geometry(geometry1 x geometry2): ")
+            win4title = input("Title: ")
+            win4bg = input("BgColor: ")
+            win['bg'] = f"{win4bg}"
+            win4label = input("Label: ")
+            win4labelplacex = input("Label place(x): ")
+            win4placelabely = input("Label place(y): ")
+            win = Tk()
+            win.geometry(f"{win4geometry}")
+            win.title(f"{win4title}")
+            winlabel = Label(win, text=f"{win4label}")
+            winlabel.place(x = win4labelplacex, y = win4placelabely)
+            print("compiling...")
+            sleep(randint(1,5))
+            win.mainloop()
+        if "win4Tools" not in imp:
+            print("Win4Tools not installed")
+    if t == "win4.create(window, label, button)"or t == "win4.create(window,label,button)":
+        if "win4Tools" in imp:
+            win4geometry = input("Geometry(geometry1 x geometry2): ")
+            win4title = input("Title: ")
+            win4button = input("Button(text): ")
+            win4label = input("Label(text): ")
+            win4labelplacex = input("Label place(x): ")
+            win4placelabely = input("Label place(y): ")
+            win4buttonplacex = input("Button place(x): ")
+            win4buttonplacey = input("Button place(y): ")
+            winbutton = Button(win, text=f"{win4button}")
+            winbutton.place(x = win4buttonplacex, y = win4buttonplacey)
+            win = Tk()
+            win.geometry(f"{win4geometry}")
+            win.title(f"{win4title}")
+            winlabel = Label(win, text=f"{win4label}")
+            winlabel.place(x = win4labelplacex, y = win4placelabely)
+            print("compiling...")
+            sleep(randint(1,5))
+            win.mainloop()
+        if "win4Tools" not in imp:
+            print("Win4Tools not installed")
