@@ -617,13 +617,13 @@ while run:
     if t == "win4.create(window, label, (setbg))"or t == "win4.create(window,label,(setbg))":
         if "win4Tools" in imp:
             win4geometry = input("Geometry(geometry1 x geometry2): ")
+            win = Tk()
             win4title = input("Title: ")
             win4bg = input("BgColor: ")
             win['bg'] = f"{win4bg}"
             win4label = input("Label(text): ")
             win4labelplacex = input("Label place(x): ")
             win4placelabely = input("Label place(y): ")
-            win = Tk()
             win.geometry(f"{win4geometry}")
             win.title(f"{win4title}")
             winlabel = Label(win, text=f"{win4label}")
@@ -636,6 +636,7 @@ while run:
     if t == "win4.create(window, label, button)"or t == "win4.create(window,label,button)":
         if "win4Tools" in imp:
             win4geometry = input("Geometry(geometry1 x geometry2): ")
+            win = Tk()
             win4title = input("Title: ")
             win4button = input("Button(text): ")
             win4label = input("Label(text): ")
@@ -645,7 +646,6 @@ while run:
             win4buttonplacey = input("Button place(y): ")
             winbutton = Button(win, text=f"{win4button}")
             winbutton.place(x = win4buttonplacex, y = win4buttonplacey)
-            win = Tk()
             win.geometry(f"{win4geometry}")
             win.title(f"{win4title}")
             winlabel = Label(win, text=f"{win4label}")
@@ -658,6 +658,7 @@ while run:
     if t == "win4.create(window, label, button, (setbg))"or t == "win4.create(window,label,button,(setbg))":
         if "win4Tools" in imp:
             win4geometry = input("Geometry(geometry1 x geometry2): ")
+            win = Tk()
             win4title = input("Title: ")
             win4bg = input("BgColor: ")
             win['bg'] = f"{win4bg}"
@@ -669,7 +670,6 @@ while run:
             win4buttonplacey = input("Button place(y): ")
             winbutton = Button(win, text=f"{win4button}")
             winbutton.place(x = win4buttonplacex, y = win4buttonplacey)
-            win = Tk()
             win.geometry(f"{win4geometry}")
             win.title(f"{win4title}")
             winlabel = Label(win, text=f"{win4label}")
@@ -683,6 +683,7 @@ while run:
         if "win4Tools" in imp:
             win4geometry = input("Geometry(geometry1 x geometry2): ")
             win4title = input("Title: ")
+            win = Tk()
             win4button = input("Button(text): ")
             win4label = input("Label(text): ")
             win4labelplacex = input("Label place(x): ")
@@ -696,7 +697,6 @@ while run:
             winbutton.place(x = win4buttonplacex, y = win4buttonplacey)
             winentry = Entry(win, text=f"{win4entryname}")
             winentry.place(x = win4entryplacex, y = win4entryplacey)
-            win = Tk()
             win.geometry(f"{win4geometry}")
             win.title(f"{win4title}")
             winlabel = Label(win, text=f"{win4label}")
@@ -709,6 +709,7 @@ while run:
     if t == "win4.create(window, label, button, entry, (setbg))"or t == "win4.create(window,label,button,entry,(setbg))":
         if "win4Tools" in imp:
             win4geometry = input("Geometry(geometry1 x geometry2): ")
+            win = Tk()
             win4title = input("Title: ")
             win4bg = input("BgColor: ")
             win['bg'] = f"{win4bg}"
@@ -725,7 +726,6 @@ while run:
             winbutton.place(x = win4buttonplacex, y = win4buttonplacey)
             winentry = Entry(win, text = f"{win4entryname}")
             winentry.place(x = win4entryplacex, y = win4entryplacey)
-            win = Tk()
             win.geometry(f"{win4geometry}")
             win.title(f"{win4title}")
             winlabel = Label(win, text=f"{win4label}")
@@ -739,12 +739,12 @@ while run:
         if "win4Tools" in imp:
             win4geometry = input("Geometry(geometry1 x geometry2): ")
             win4title = input("Title: ")
+            win = Tk()
             win4entryname = input("Entry(text): ")
             win4entryplacex = input("Entry place(x): ")
             win4entryplacey = input("Entry place(y): ")
             winentry = Entry(win, text = f"{win4entryname}")
             winentry.place(x = win4entryplacex, y = win4entryplacey)
-            win = Tk()
             win.geometry(f"{win4geometry}")
             win.title(f"{win4title}")
             print("compiling...")
@@ -764,7 +764,6 @@ while run:
             win4entryplacey = input("Entry place(y): ")
             winentry = Entry(win, text = f"{win4entryname}")
             winentry.place(x = win4entryplacex, y = win4entryplacey)
-            win = Tk()
             win.geometry(f"{win4geometry}")
             win.title(f"{win4title}")
             print("compiling...")
@@ -776,6 +775,7 @@ while run:
         if "win4Tools" in imp:
             win4geometry = input("Geometry(geometry1 x geometry2): ")
             win4title = input("Title: ")
+            win = Tk()
             win4entryname = input("Entry(text): ")
             win4entryplacex = input("Entry place(x): ")
             win4entryplacey = input("Entry place(y): ")
@@ -786,7 +786,6 @@ while run:
             winentry.place(x = win4entryplacex, y = win4entryplacey)
             winlabel = Label(win, text=f"{win4label}")
             winlabel.place(x = win4labelplacex, y = win4placelabely)
-            win = Tk()
             win.geometry(f"{win4geometry}")
             win.title(f"{win4title}")
             print("compiling...")
@@ -811,7 +810,6 @@ while run:
             winentry.place(x = win4entryplacex, y = win4entryplacey)
             winlabel = Label(win, text=f"{win4label}")
             winlabel.place(x = win4labelplacex, y = win4placelabely)
-            win = Tk()
             win.geometry(f"{win4geometry}")
             win.title(f"{win4title}")
             print("compiling...")
@@ -824,11 +822,11 @@ while run:
             win4geometry = input("Geometry(geometry1 x geometry2): ")
             win4title = input("Title: ")
             win4button = input("Button(text): ")
+            win = Tk()
             win4buttonplacex = input("Button place(x): ")
             win4buttonplacey = input("Button place(y): ")
             winbutton = Button(win, text=f"{win4button}")
             winbutton.place(x = win4buttonplacex, y = win4buttonplacey)
-            win = Tk()
             win.geometry(f"{win4geometry}")
             win.title(f"{win4title}")
             print("compiling...")
@@ -848,7 +846,6 @@ while run:
             win4buttonplacey = input("Button place(y): ")
             winbutton = Button(win, text=f"{win4button}")
             winbutton.place(x = win4buttonplacex, y = win4buttonplacey)
-            win = Tk()
             win.geometry(f"{win4geometry}")
             win.title(f"{win4title}")
             print("compiling...")
