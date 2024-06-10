@@ -35,12 +35,12 @@ art.tprint("E  L  E  C  T  R  O  B  R  A  I  N")
 sleep(2)
 inp = art.tprint("ElectroBrain")
 print(Fore.RESET+"")
-os.system("cls||clear")
+os.system("clear")
 run = True
 while run:
     t = input("ElectroBrain(Programming Language): ")
     if t == "clear":
-        os.system("cls||clear")
+        os.system("clear")
     if t == "print()":
         say = input("Print: ")
         print(say)
@@ -194,42 +194,12 @@ while run:
     if t == "license()":
         webbrowser.open_new_tab("LICENSE")
     if t == "list()":
-        whatlist = input("Word in list(max 6): ")
-        if whatlist == "1":
-            leste = input("List: ")
-            list = [leste]
-        if whatlist == "2":
-            leste1 = input("List: ")
-            leste2 = input("List(2): ")
-            list = [leste1, leste2]
-        if whatlist == "3":
-            leste13 = input("List: ")
-            leste23 = input("List(2): ")
-            leste33 = input("List(3): ")
-            list = [leste13, leste23, leste33]
-        if whatlist == "4":
-            leste14 = input("List: ")
-            leste24 = input("List(2): ")
-            leste34 = input("List(3): ")
-            leste44 = input("List(4): ")
-            list = [leste14, leste24, leste34, leste44]
-        if whatlist == "5":
-            leste15 = input("List: ")
-            leste25 = input("List(2): ")
-            leste35 = input("List(3): ")
-            leste45 = input("List(4): ")
-            leste55 = input("List(5): ")
-            list = [leste15, leste25, leste35]
-        if whatlist == "6":
-            l16 = input("List: ")
-            l26 = input("List(2): ")
-            l36 = input("List(3): ")
-            l46 = input("List(4): ")
-            l56 = input("List(5): ")
-            l66 = input("List(6): ")
-            list = [l16, l26, l36, l46, l56, l66]
-        else:
-            print("InputError: write number(1, 2, 3, 4, 5, 6)")
+        whatlist = input("List name: ")
+        list = ""
+    if t == "list.add()":
+        listadd = input("List add: ")
+        list += listadd
+        print(list)
     if t == "console.error()":
         error = input("Error: ")
         print(Fore.RED+"❌Error "+error+Fore.RESET)
@@ -617,13 +587,13 @@ while run:
     if t == "win4.create(window, label, (setbg))"or t == "win4.create(window,label,(setbg))":
         if "win4Tools" in imp:
             win4geometry = input("Geometry(geometry1 x geometry2): ")
-            win = Tk()
             win4title = input("Title: ")
             win4bg = input("BgColor: ")
             win['bg'] = f"{win4bg}"
             win4label = input("Label(text): ")
             win4labelplacex = input("Label place(x): ")
             win4placelabely = input("Label place(y): ")
+            win = Tk()
             win.geometry(f"{win4geometry}")
             win.title(f"{win4title}")
             winlabel = Label(win, text=f"{win4label}")
@@ -636,7 +606,6 @@ while run:
     if t == "win4.create(window, label, button)"or t == "win4.create(window,label,button)":
         if "win4Tools" in imp:
             win4geometry = input("Geometry(geometry1 x geometry2): ")
-            win = Tk()
             win4title = input("Title: ")
             win4button = input("Button(text): ")
             win4label = input("Label(text): ")
@@ -644,6 +613,7 @@ while run:
             win4placelabely = input("Label place(y): ")
             win4buttonplacex = input("Button place(x): ")
             win4buttonplacey = input("Button place(y): ")
+            win = Tk()
             winbutton = Button(win, text=f"{win4button}")
             winbutton.place(x = win4buttonplacex, y = win4buttonplacey)
             win.geometry(f"{win4geometry}")
@@ -658,7 +628,6 @@ while run:
     if t == "win4.create(window, label, button, (setbg))"or t == "win4.create(window,label,button,(setbg))":
         if "win4Tools" in imp:
             win4geometry = input("Geometry(geometry1 x geometry2): ")
-            win = Tk()
             win4title = input("Title: ")
             win4bg = input("BgColor: ")
             win['bg'] = f"{win4bg}"
@@ -668,6 +637,7 @@ while run:
             win4placelabely = input("Label place(y): ")
             win4buttonplacex = input("Button place(x): ")
             win4buttonplacey = input("Button place(y): ")
+            win = Tk()
             winbutton = Button(win, text=f"{win4button}")
             winbutton.place(x = win4buttonplacex, y = win4buttonplacey)
             win.geometry(f"{win4geometry}")
@@ -709,7 +679,6 @@ while run:
     if t == "win4.create(window, label, button, entry, (setbg))"or t == "win4.create(window,label,button,entry,(setbg))":
         if "win4Tools" in imp:
             win4geometry = input("Geometry(geometry1 x geometry2): ")
-            win = Tk()
             win4title = input("Title: ")
             win4bg = input("BgColor: ")
             win['bg'] = f"{win4bg}"
@@ -722,6 +691,7 @@ while run:
             win4entryname = input("Entry(text): ")
             win4entryplacex = input("Entry place(x): ")
             win4entryplacey = input("Entry place(y): ")
+            win = Tk()
             winbutton = Button(win, text=f"{win4button}")
             winbutton.place(x = win4buttonplacex, y = win4buttonplacey)
             winentry = Entry(win, text = f"{win4entryname}")
