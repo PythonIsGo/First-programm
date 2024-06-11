@@ -823,3 +823,6 @@ while run:
             win.mainloop()
         if "win4Tools" not in imp:
             print("Win4Tools not installed")
+    if t == "playsound.play()":
+        path = input("Path(or name.mp3): ")
+        playsound.playsound(f"{path}")

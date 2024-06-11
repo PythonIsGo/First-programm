@@ -1,3 +1,12 @@
+echo "UBUNTU/DEBIAN   Python"
+sudo apt install python3
+sudo apt install pip
+echo "Fedora Python"
+sudo dnf install python3
+sudo dnf install python3-pip
+echo "ARCH   Python"
+sudo pacman -S python3
+sudo pacman -S pip
 echo "Colorama"
 pip install colorama
 echo "Os"
