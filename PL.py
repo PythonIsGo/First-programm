@@ -38,7 +38,7 @@ print(Fore.RESET+"")
 os.system("clear")
 run = True
 while run:
-    t = input("ElectroBrain(Programming Language): ")
+    t = input(">>>")
     if t == "clear":
         os.system("clear")
     if t == "print()":
@@ -410,7 +410,7 @@ while run:
     if t == "send.sysget()":
         sysget = input("System get: ")
         system += sysget
-        print(f"\n\n\n\n\n\n\n\n SYSTEM GET:  {sysget}\n\n\n\n\n\n\n\n\n\n")
+        systemget = os.system(f"{sysget}")
     if t == "print(messages)":
         print(messages)
     if t == "println(messages)":
@@ -557,11 +557,11 @@ while run:
             if "win4Tools" in imp:
                 win4geometry = input("Geometry(geometry1 x geometry2): ")
                 win4title = input("Title: ")
-                win4bg = input("BgColor: ")
                 win = Tk()
+                win4bg = input("BgColor: ")
+                win['bg'] = win4bg
                 win.geometry(f"{win4geometry}")
                 win.title(f"{win4title}")
-                win['bg'] = f"{win4bg}"
                 print("compiling...")
                 sleep(randint(1,5))
                 win.mainloop()
@@ -588,12 +588,12 @@ while run:
         if "win4Tools" in imp:
             win4geometry = input("Geometry(geometry1 x geometry2): ")
             win4title = input("Title: ")
+            win = Tk()
             win4bg = input("BgColor: ")
             win['bg'] = f"{win4bg}"
             win4label = input("Label(text): ")
             win4labelplacex = input("Label place(x): ")
             win4placelabely = input("Label place(y): ")
-            win = Tk()
             win.geometry(f"{win4geometry}")
             win.title(f"{win4title}")
             winlabel = Label(win, text=f"{win4label}")
@@ -603,7 +603,7 @@ while run:
             win.mainloop()
         if "win4Tools" not in imp:
             print("Win4Tools not installed")
-    if t == "win4.create(window, label, button)"or t == "win4.create(window,label,button)":
+    if t == "win4.create(window, label, button)"or t == "win4.create(window,label,button)"or t == "win4.create(window,button,label)" or t == "win4.create(window, button, label)":
         if "win4Tools" in imp:
             win4geometry = input("Geometry(geometry1 x geometry2): ")
             win4title = input("Title: ")
@@ -625,10 +625,11 @@ while run:
             win.mainloop()
         if "win4Tools" not in imp:
             print("Win4Tools not installed")
-    if t == "win4.create(window, label, button, (setbg))"or t == "win4.create(window,label,button,(setbg))":
+    if t == "win4.create(window, label, button, (setbg))"or t == "win4.create(window,label,button,(setbg))"or t == "win4create(window,button,label,(setbg))" or t == "win4.create(window, button, label, (setbg))":
         if "win4Tools" in imp:
             win4geometry = input("Geometry(geometry1 x geometry2): ")
             win4title = input("Title: ")
+            win = Tk()
             win4bg = input("BgColor: ")
             win['bg'] = f"{win4bg}"
             win4button = input("Button(text): ")
@@ -637,7 +638,6 @@ while run:
             win4placelabely = input("Label place(y): ")
             win4buttonplacex = input("Button place(x): ")
             win4buttonplacey = input("Button place(y): ")
-            win = Tk()
             winbutton = Button(win, text=f"{win4button}")
             winbutton.place(x = win4buttonplacex, y = win4buttonplacey)
             win.geometry(f"{win4geometry}")
@@ -680,6 +680,7 @@ while run:
         if "win4Tools" in imp:
             win4geometry = input("Geometry(geometry1 x geometry2): ")
             win4title = input("Title: ")
+            win = Tk()
             win4bg = input("BgColor: ")
             win['bg'] = f"{win4bg}"
             win4button = input("Button(text): ")
@@ -691,7 +692,6 @@ while run:
             win4entryname = input("Entry(text): ")
             win4entryplacex = input("Entry place(x): ")
             win4entryplacey = input("Entry place(y): ")
-            win = Tk()
             winbutton = Button(win, text=f"{win4button}")
             winbutton.place(x = win4buttonplacex, y = win4buttonplacey)
             winentry = Entry(win, text = f"{win4entryname}")
@@ -791,8 +791,8 @@ while run:
         if "win4Tools" in imp:
             win4geometry = input("Geometry(geometry1 x geometry2): ")
             win4title = input("Title: ")
-            win4button = input("Button(text): ")
             win = Tk()
+            win4button = input("Button(text): ")
             win4buttonplacex = input("Button place(x): ")
             win4buttonplacey = input("Button place(y): ")
             winbutton = Button(win, text=f"{win4button}")
@@ -826,3 +826,14 @@ while run:
     if t == "playsound.play()":
         path = input("Path(or name.mp3): ")
         playsound.playsound(f"{path}")
+    if t == "zip.open()":
+        namezip = input("Name: ")
+        files = input("File: ")
+        os.system(f"zip {namezip}.zip {files}") 
+    if t == "create.boot()":
+        with open("boot.py", '+w') as file:
+            file.write("""
+import os
+print("rebooting")
+print("BOOT")
+os.system("./start.sh")""")
