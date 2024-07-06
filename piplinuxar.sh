@@ -27,6 +27,8 @@ echo "Pillow"
 pip install Pillow
 echo "Playsound"
 pip install playsound
+echo Ursina
+pip install ursina
 echo "Psutil"
 pip install psutil
 echo "ARCH   TKINTER"

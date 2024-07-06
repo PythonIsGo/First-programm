@@ -1,4 +1,5 @@
 from colorama import Fore, Back, Style
+from ursina import Ursina, Entity, color, held_keys
 from random import randint, choice
 import os
 import datetime
@@ -129,6 +130,9 @@ while run:
         if impor == "win4Tools":
             print("Import settings save")
             imp += "win4Tools"
+        if impor == "egame":
+            print("Import settings save")
+            imp += "egame"
     if t == "print(imports)":
         print(imp)
     if t == "println(imports)":
@@ -837,3 +841,9 @@ import os
 print("rebooting")
 print("BOOT")
 os.system("./start.sh")""")
+    if t == "egame.start()":
+            if imp in "egame":
+                engine = Tk()
+                engine.geometry("900x900")
+                engine.title("EGame.menu")
+                btn_start_engine = Button(engine, text="")

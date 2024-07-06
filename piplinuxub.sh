@@ -29,6 +29,8 @@ echo "Playsound"
 pip install playsound
 echo "Psutil"
 pip install psutil
+echo Ursina
+pip install ursina
 echo "DEBIAN/UBUNTU   TKINTER"
 sudo sudo apt-get install python3-tk
 echo "IF - no_module-named-tkinter"

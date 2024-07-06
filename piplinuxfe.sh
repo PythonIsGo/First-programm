@@ -25,6 +25,8 @@ echo "Search"
 pip install search
 echo "Pillow"
 pip install Pillow
+echo Ursina
+pip install ursina
 echo "Playsound"
 pip install playsound
 echo "Psutil"
