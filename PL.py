@@ -843,7 +843,14 @@ print("BOOT")
 os.system("./start.sh")""")
     if t == "egame.start()":
             if imp in "egame":
-                engine = Tk()
-                engine.geometry("900x900")
-                engine.title("EGame.menu")
-                btn_start_engine = Button(engine, text="")
+                egame_player = ""
+                with open("egamefile.py", '+w') as file1:
+                    file1.write("""from ursina import Ursina, Entity, color, held_keys
+                                
+app = Ursina()""")
+                    file1.close()
+                egame_object = input("egame___object_player_type>>>")
+                if egame_object == "cube":
+                    egame_player += "Entity(model = 'cube', "
+                if egame_object == "circle":
+                    egame_player += "Entity(model = 'circle', "
