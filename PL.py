@@ -843,14 +843,80 @@ print("BOOT")
 os.system("./start.sh")""")
     if t == "egame.start()":
             if imp in "egame":
-                egame_player = ""
-                with open("egamefile.py", '+w') as file1:
-                    file1.write("""from ursina import Ursina, Entity, color, held_keys
-                                
-app = Ursina()""")
-                    file1.close()
+                egame_player = "player = "
                 egame_object = input("egame___object_player_type>>>")
                 if egame_object == "cube":
                     egame_player += "Entity(model = 'cube', "
                 if egame_object == "circle":
-                    egame_player += "Entity(model = 'circle', "
+                    egame_player += "Entity(model = 'circle',"
+                if egame_object == "sphere":
+                    egame_object += "Entity(model = 'sphere',"
+                egame_texture = input("Texture file(file name or no): ")
+                if egame_texture == "no":
+                    print("OK")
+                    egame_textures = "no"
+                if egame_texture != "no":
+                    egame_player += f"texture = '{egame_texture}', "
+                if egame_texture == "no":
+                    egame_color = input("Color: ")
+                    if egame_color == "red":
+                        egame_player += f"color = color.red, "
+                    if egame_color == "blue":
+                        egame_player += f"color = color.blue, "
+                    if egame_color == "green":
+                        egame_player += f"color = color.green, "
+                    if egame_color == "yellow":
+                        egame_player += f"color = color.yellow, "
+                    if egame_color == "white":
+                        egame_player += f"color = color.white, "
+                    if egame_color == "black":
+                        egame_player += f"color = color.black, "
+                if egame_texture != "no":
+                    print(" ")
+                if egame_texture == "no":
+                    if egame_object == "sphere":
+                        egame_player += "texture = 'white_sphere'"
+                    if egame_object == "cube":
+                        egame_player += "texture = 'white_cube'"
+                    if egame_object == "circle":
+                        egame_player += "texture = 'white_circle'"
+                egame_scale = input("Scale: ")
+                egame_player += f"scale = {egame_scale})"
+                egame_keys = input("Keys(game or 3d):")
+                if egame_keys == "game":
+                    egame_player += """
+                    
+def update():
+    if held_keys['w']:
+        player.position += (0,0.1,0)
+    elif held_keys['s']:
+        player.position -= (0,0.1,0)
+    elif held_keys['a']:
+        player.position -= (0.1,0,0)
+    elif held_keys['d']:
+        player.position += (0.1,0,0)"""
+                if egame_keys == "3d":
+                    egame_player += """
+                    
+def update():
+    if held_keys['w']:
+        player.position += (0,0.1,0)
+    elif held_keys['s']:
+        player.position -= (0,0.1,0)
+    elif held_keys['a']:
+        player.position -= (0.1,0,0)
+    elif held_keys['d']:
+        player.position += (0.1,0,0)
+    player.rotation_x += held_keys['x']*2
+    player.rotation_y += held_keys['y']*2"""
+                with open("egamefile11.py", 'w+') as f2:
+                    f2.write(f"""from ursina import Ursina, Entity, color, held_keys
+                                
+app = Ursina()
+                             
+{egame_player}
+
+app.run()""")
+                    f2.close()
+                os.system("python3 egamefile11.py")
+                sleep(1)
