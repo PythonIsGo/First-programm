@@ -1,6 +1,8 @@
 echo "UBUNTU/DEBIAN   Python"
 sudo apt install python3
 sudo apt install pip
+echo ESPEAK
+sudo apt install espeak-ng-espeak
 echo "Colorama"
 pip install colorama
 echo "Os"

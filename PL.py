@@ -27,13 +27,12 @@ email = ""
 get = ""
 system = ""
 print(Fore.LIGHTYELLOW_EX + Back.BLACK+ Style.BRIGHT+"")
-art.tprint("Hello!")
 playsound.playsound('zapusk.mp3')
-print(Fore.LIGHTMAGENTA_EX+"")
+print(Fore.LIGHTYELLOW_EX+"")
 imp = ''
 sleep(2)
 art.tprint("E  L  E  C  T  R  O  B  R  A  I  N")
-sleep(2)
+sleep(1.8)
 inp = art.tprint("ElectroBrain")
 print(Fore.RESET+"")
 os.system("clear")
@@ -919,4 +918,3 @@ app = Ursina()
 app.run()""")
                     f2.close()
                 os.system("python3 egamefile11.py")
-                sleep(1)

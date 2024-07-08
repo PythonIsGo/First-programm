@@ -1,6 +1,8 @@
 echo "ARCH   Python"
 sudo pacman -S python3
 sudo pacman -S pip
+echo ESPEAK
+echo https://wiki.archlinux.org/title/Install_Arch_Linux_with_accessibility_options_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)
 echo "Colorama"
 pip install colorama
 echo "Os"

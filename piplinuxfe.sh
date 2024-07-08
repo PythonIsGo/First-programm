@@ -1,6 +1,8 @@
 echo "Fedora Python"
 sudo dnf install python3
 sudo dnf install python3-pip
+echo ESPEAK
+echo https://packages.fedoraproject.org/pkgs/espeak/espeak/
 echo "Colorama"
 pip install colorama
 echo "Os"
