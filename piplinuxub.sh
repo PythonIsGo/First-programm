@@ -39,4 +39,4 @@ echo "IF - no_module-named-tkinter"
 sudo apt-get install python-tk
 
 pip install -U g4f
-echo "COMPLECTED"
+echo "COMPLECTED INSTALLATION"
